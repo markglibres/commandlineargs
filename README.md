@@ -1,6 +1,9 @@
 # commandlineargs
 Command Line Arguments Parser for console applications using C#
 
+Available on NuGet: https://www.nuget.org/packages/CADs.CommandLineArgs/1.0.0
+PM> Install-Package CADs.CommandLineArgs
+
 Usage: youconsoleapp.exe -f param1Value -action "Parameter 2 value"
 
 1. Create your class with the structure of your parameters. For example:
