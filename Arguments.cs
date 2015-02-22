@@ -16,21 +16,18 @@ namespace CommandLineArgs
             Dictionary<string, string> _args = ToDictionary(args);
 
             PropertyInfo[] properties = typeof(T).GetProperties();
-            int totalProperties = properties.Count();
-
+            
             //parse all available properties
-            for (int i = 0; i < totalProperties; i++ )
+            foreach (PropertyInfo prop in properties)
             {
-                PropertyInfo prop = properties[i];
-
                 //get custom attributes for each property
                 object[] attributes = prop.GetCustomAttributes(true);
                 int totalAttributes = attributes.Count();
                 
                 //parse through the custom attributes
-                for (int j = 0; j < totalAttributes; j++)
+                foreach (object attribute in attributes)
                 {
-                    ArgumentAttribute attr = attributes[j] as ArgumentAttribute;
+                    ArgumentAttribute attr = attribute as ArgumentAttribute;
                     //if attribute is a valid ArgumentAttribute type, assign value
                     if(attr != null)
                     {
