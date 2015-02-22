@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CADs.CommandLineArgs
+namespace CommandLineArgs
 {
     [AttributeUsage(AttributeTargets.Property, Inherited=false,AllowMultiple=false)]
     public class ArgumentAttribute : Attribute

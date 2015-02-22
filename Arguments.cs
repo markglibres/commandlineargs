@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 
-namespace CADs.CommandLineArgs
+namespace CommandLineArgs
 {
     public static class Arguments
     {

@@ -7,7 +7,7 @@
     <ProjectGuid>{D617ABE2-D2E4-438B-8C75-1FC11FB521CB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CADs.CommandLineArgs</RootNamespace>
+    <RootNamespace>CommandLineArgs</RootNamespace>
     <AssemblyName>CADs.CommandLineArgs</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
