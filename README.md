@@ -7,7 +7,7 @@ PM> Install-Package CADs.CommandLineArgs
 
 Usage: youconsoleapp.exe -f param1Value -action "Parameter 2 value"
 
-*Create your class with the structure of your parameters. For example:
+* Create your class with the structure of your parameters. For example:
 
 
 ```c#
@@ -29,7 +29,7 @@ public class Options
 
 ```
 
-*On your main program, pass your class on the Parser together with the console arguments. For example:
+* On your main program, pass your class on the Parser together with the console arguments. For example:
 
 
 ```c#
@@ -41,7 +41,7 @@ static void Main(string[] args)
 ```
 
 
-*You may now access your parameters with the following code:
+* You may now access your parameters with the following code:
 
 
 ```c#
