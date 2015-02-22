@@ -6,8 +6,7 @@ Usage: youconsoleapp.exe -f param1Value -action "Parameter 2 value"
 1. Create your class with the structure of your parameters. For example:
 
 
-```
-#!c#
+```c#
 
 using CommandLineArgs;
 
@@ -29,8 +28,7 @@ public class Options
 2. On your main program, pass your class on the Parser together with the console arguments. For example:
 
 
-```
-#!c#
+```c#
 
 static void Main(string[] args)
 {
@@ -42,8 +40,7 @@ static void Main(string[] args)
 3. You may now access your parameters with the following code:
 
 
-```
-#!c#
+```c#
 
 Console.WriteLine(options.inputFile);
 Console.WriteLine(options.action);
