@@ -31,17 +31,19 @@ namespace CommandLineArgs
                     //if attribute is a valid ArgumentAttribute type, assign value
                     if(attr != null)
                     {
+                        object attrValue = null;
                         //if property found on command line arguments
-                        if(_args.ContainsKey(attr.ShortName) || _args.ContainsKey(attr.LongName))
+                        if (_args.ContainsKey(attr.ShortName) || _args.ContainsKey(attr.LongName))
                         {
-                            //if property is writeable
-                            if(prop.CanWrite)
-                            {
-                                //assign default value if not present
-                                object attrValue = _args[attr.ShortName] ?? _args[attr.LongName] ?? attr.DefaultValue;
-                                //set value to property
-                                prop.SetValue(_options, Convert.ChangeType(attrValue,prop.PropertyType), null);
-                            }
+                            attrValue = _args[attr.ShortName] ?? _args[attr.LongName];
+                        }
+                        //if property is writeable
+                        if (prop.CanWrite)
+                        {
+                            //assign default value if not present
+                            attrValue = attrValue ?? attr.DefaultValue;
+                            //set value to property
+                            prop.SetValue(_options, Convert.ChangeType(attrValue, prop.PropertyType), null);
                         }
                     }
                 }
